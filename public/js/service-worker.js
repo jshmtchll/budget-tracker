@@ -34,7 +34,7 @@ self.addEventListener("activate", function (e) {
       return Promise.all(
         keyList.map(function (key, i) {
           if (cacheKeepList.indexOf(key) === -1) {
-            return chaches.delete(keyList[i]);
+            return caches.delete(keyList[i]);
           }
         })
       );
